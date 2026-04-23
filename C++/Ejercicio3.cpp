@@ -4,16 +4,25 @@
 int main()
 {
     int cantn = 0;
-    float notas = 0.1, cantapro = 0, cantdesapro = 0, promnota = 0.0, notamax = 0.0, notamin = 5.0, sumanota = 0;
+    float notas = 0.1, cantapro = 0, cantdesapro = 0, promnota = 0.0, notamax = 0.0, notamin = 0.0, sumanota = 0;
+    bool primeraN = true;
     while(notas != -1)
     {
-        if(notas > 0.0 && notas < 5.0)
+        std::cout << "Ingrese la nota: "<<"\n";
+        std::cin >> notas;
+        if(notas < 0.0 || notas > 5.0)
         {
-            std::cout << "Ingrese la nota: "<<"\n";
-            std::cin >> notas;
+            continue;
+        }
+        if(primeraN)
+        {
+            notamax = notas;
+            notamin = notas;
+            primeraN = false;
+        }
+        if(notas > 0.0 || notas < 5.0)
+        {
             cantn = cantn + 1;
-            if (notas != -1)
-            {
                 if(notas >= 3.0)
                 {
                 cantapro = cantapro + 1;
@@ -22,25 +31,15 @@ int main()
                 {
                 cantdesapro = cantdesapro + 1;
                 }
-                if(notamax < notas && notas < 5.0)
+                if(notamax < notas)
                 {
                 notamax = notas;
                 }
-4                if(notamin >= notas)
+                if(notamin > notas)
                 {
                 notamin = notas;
                 }
                 sumanota = sumanota + notas;
-            }
-            else
-            {
-                cantn = cantn - 1;
-            }
-        }
-        else
-        {
-        std::cout << "Ingrese un valor valido por favor"<<"\n";
-        std::cin >> notas;
         }
     }
     promnota = sumanota / cantn;
