@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Punt7"/>
+        <attribute name="authors" value="Black"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-16 06:42:01 a.&#160;m."/>
+        <attribute name="created" value="QmxhY2s7REVTS1RPUC01STlMS1M1OzIwMjYtMDMtMTQ7MDE6MzM6MTYgcC7CoG0uOzMxMjI="/>
+        <attribute name="edited" value="QmxhY2s7REVTS1RPUC01STlMS1M1OzIwMjYtMDMtMTY7MDY6NDI6MDEgYS7CoG0uOzI7MzIxNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, pos, neg, sump, sumn, promp, promn" type="Integer" array="False" size=""/>
+            <assign variable="num" expression="1"/>
+            <assign variable="sump" expression="0"/>
+            <assign variable="sumn" expression="0"/>
+            <assign variable="promp" expression="0"/>
+            <assign variable="promn" expression="0"/>
+            <assign variable="pos" expression="0"/>
+            <assign variable="neg" expression="0"/>
+            <output expression="&quot;Ingrese los n&#250;meros positivos y negativos y calcule su promedio, cuando desee terminar ingrese 0&quot;" newline="True"/>
+            <while expression="num != 0">
+                <input variable="num"/>
+                <if expression="num &gt; 0">
+                    <then>
+                        <assign variable="pos" expression="pos + 1"/>
+                        <assign variable="sump" expression="sump + num"/>
+                    </then>
+                    <else>
+                        <if expression="num &lt; 0">
+                            <then>
+                                <assign variable="neg" expression="neg + 1"/>
+                                <assign variable="sumn" expression="sumn + num"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <assign variable="promp" expression="(sump) / (pos)"/>
+            <assign variable="promn" expression="(sumn) / neg"/>
+            <output expression="&quot;El n&#250;mero de positivos que ingreso fue: &quot; &amp; pos &amp; &quot; y su promedio fue &quot; &amp; promp" newline="True"/>
+            <output expression="&quot;El n&#250;mero de negativos que ingreso fue: &quot; &amp; neg &amp; &quot; y su promedio fue &quot; &amp; promn" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

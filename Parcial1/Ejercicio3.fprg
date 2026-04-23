@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ejercicio3"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-17 08:16:58 a.&#8239;m."/>
+        <attribute name="created" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAzLTE3OzA4OjE0OjE2IGEu4oCvbS47MTA0MDI="/>
+        <attribute name="edited" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAzLTE3OzA4OjE2OjU4IGEu4oCvbS47MTsxMDUxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, n" type="Integer" array="False" size=""/>
+            <input variable="num"/>
+            <assign variable="n" expression="1"/>
+            <while expression="n &lt;= num">
+                <if expression="n % 2 == 0">
+                    <then>
+                        <output expression="n &amp; &quot; Es par&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="n &amp; &quot; Es Impar&quot;" newline="True"/>
+                    </else>
+                </if>
+                <assign variable="n" expression="n + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

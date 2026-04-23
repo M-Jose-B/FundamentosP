@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="mcd1"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-02-26 08:25:46 a.&#8239;m."/>
+        <attribute name="created" value="Q0VOVElDO0hCMy05OzIwMjYtMDItMjY7MDg6MTA6NDQgYS7igK9tLjsxMDM5MA=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMy05OzIwMjYtMDItMjY7MDg6MjU6NDYgYS7igK9tLjsyOzEwNTA3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x1, x2, mcd, min, i" type="Integer" array="False" size=""/>
+            <input variable="x1"/>
+            <input variable="x2"/>
+            <if expression="x1 &lt; x2">
+                <then>
+                    <assign variable="min" expression="x1"/>
+                </then>
+                <else>
+                    <assign variable="min" expression="x2"/>
+                </else>
+            </if>
+            <assign variable="i" expression="1"/>
+            <assign variable="mcd" expression="1"/>
+            <while expression="i &lt;= min">
+                <if expression="x1 % i == 0 &amp;&amp; x2 % i == 0">
+                    <then>
+                        <assign variable="mcd" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <output expression="mcd" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

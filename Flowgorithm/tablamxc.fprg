@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="tablamxc"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-02-19 09:24:11 a.&#8239;m."/>
+        <attribute name="created" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAyLTE5OzA4OjUxOjA3IGEu4oCvbS47MTA0MDQ="/>
+        <attribute name="edited" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAyLTE5OzA5OjI0OjExIGEu4oCvbS47MTsxMDUwOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, Resultado" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <for variable="i" start="1" end="89" direction="inc" step="1">
+                <assign variable="Resultado" expression="n*i"/>
+                <output expression="n &amp; &quot; x &quot; &amp; i &amp; &quot; = &quot; &amp; resultado" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

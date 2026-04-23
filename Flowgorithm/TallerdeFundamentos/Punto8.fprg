@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Punto8"/>
+        <attribute name="authors" value="Black"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-16 07:31:24 a.&#160;m."/>
+        <attribute name="created" value="QmxhY2s7REVTS1RPUC01STlMS1M1OzIwMjYtMDMtMTY7MDY6NDI6NDQgYS7CoG0uOzMxMTU="/>
+        <attribute name="edited" value="QmxhY2s7REVTS1RPUC01STlMS1M1OzIwMjYtMDMtMTY7MDc6MzE6MjQgYS7CoG0uOzE7MzIyMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, hlp" type="Integer" array="False" size=""/>
+            <declare name="num, ult, i" type="String" array="False" size=""/>
+            <input variable="num"/>
+            <assign variable="n" expression="0"/>
+            <assign variable="ult" expression="&quot;&quot;"/>
+            <assign variable="i" expression="&quot;&quot;"/>
+            <while expression="n &lt; len(num)">
+                <assign variable="i" expression="Char(num,n)"/>
+                <assign variable="hlp" expression="ToInteger(i) + 1"/>
+                <if expression="hlp == 10">
+                    <then>
+                        <assign variable="hlp" expression="0"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="ult" expression="ult &amp; ToString(hlp)"/>
+                <assign variable="n" expression="n + 1"/>
+            </while>
+            <output expression="ult" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

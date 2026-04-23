@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Punto 5"/>
+        <attribute name="authors" value="Black"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-16 02:18:50 p.&#160;m."/>
+        <attribute name="created" value="QmxhY2s7REVTS1RPUC01STlMS1M1OzIwMjYtMDMtMTY7MDE6MzI6MzQgcC7CoG0uOzMxMjM="/>
+        <attribute name="edited" value="QmxhY2s7REVTS1RPUC01STlMS1M1OzIwMjYtMDMtMTY7MDI6MTg6NTAgcC7CoG0uOzE7MzIzNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, n, bi, cu, oc, res" type="Integer" array="False" size=""/>
+            <declare name="bin, cuad, oct" type="String" array="False" size=""/>
+            <input variable="num"/>
+            <assign variable="bin" expression="&quot;&quot;"/>
+            <assign variable="cuad" expression="&quot;&quot;"/>
+            <assign variable="oct" expression="&quot;&quot;"/>
+            <assign variable="n" expression="0"/>
+            <assign variable="cu" expression="num"/>
+            <assign variable="oc" expression="num"/>
+            <assign variable="bi" expression="num"/>
+            <while expression="n &lt;= num &amp;&amp; bi != 0">
+                <assign variable="res" expression="bi % 2"/>
+                <assign variable="bin" expression="ToString(res) &amp; bin"/>
+                <assign variable="bi" expression="bi / 2"/>
+                <assign variable="n" expression="n + 1"/>
+            </while>
+            <output expression="&quot;Su n&#250;mero en base 2 seria: &quot; &amp; bin" newline="True"/>
+            <assign variable="n" expression="0"/>
+            <while expression="n &lt;= num &amp;&amp; cu != 0">
+                <assign variable="res" expression="cu % 4"/>
+                <assign variable="cuad" expression="ToString(res) &amp; cuad"/>
+                <assign variable="cu" expression="cu / 4"/>
+                <assign variable="n" expression="n + 1"/>
+            </while>
+            <output expression="&quot;Su n&#250;mero en base 4 seria: &quot; &amp; cuad" newline="True"/>
+            <assign variable="n" expression="0"/>
+            <while expression="n &lt;= num &amp;&amp; oc != 0">
+                <assign variable="res" expression="oc % 8"/>
+                <assign variable="oct" expression="ToString(res) &amp; oct"/>
+                <assign variable="oc" expression="oc / 8"/>
+                <assign variable="n" expression="n + 1"/>
+            </while>
+            <output expression="&quot;Su n&#250;mero en base 8 seria: &quot; &amp; oct" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

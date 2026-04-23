@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="SecuenciaFibbo"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-02-24 09:44:01 a.&#8239;m."/>
+        <attribute name="created" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAyLTI0OzA5OjE4OjIxIGEu4oCvbS47MTA0MDA="/>
+        <attribute name="edited" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAyLTI0OzA5OjQ0OjAxIGEu4oCvbS47MTsxMDUwNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, rta, a, b" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="a" expression="0"/>
+            <assign variable="b" expression="1"/>
+            <assign variable="i" expression="2"/>
+            <assign variable="rta" expression="1"/>
+            <if expression="n = 0">
+                <then>
+                    <output expression="0" newline="True"/>
+                </then>
+                <else>
+                    <if expression="n = 1">
+                        <then>
+                            <output expression="0" newline="True"/>
+                            <output expression="1" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="0" newline="True"/>
+                            <output expression="1" newline="True"/>
+                            <for variable="i" start="2" end="n-1" direction="inc" step="1">
+                                <assign variable="rta" expression="a + b"/>
+                                <output expression="rta" newline="True"/>
+                                <assign variable="a" expression="b"/>
+                                <assign variable="b" expression="rta"/>
+                            </for>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Punto3"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-10 09:31:17 a.&#8239;m."/>
+        <attribute name="created" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAzLTEwOzA5OjIwOjM3IGEu4oCvbS47MTAzOTY="/>
+        <attribute name="edited" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAzLTEwOzA5OjMxOjE3IGEu4oCvbS47MTsxMDUwNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, n" type="Real" array="False" size=""/>
+            <input variable="num"/>
+            <if expression="num &gt;= 0">
+                <then>
+                    <assign variable="n" expression="sqrt(num)"/>
+                    <if expression="n % 1 == 0">
+                        <then>
+                            <output expression="&quot;Es cuadrado perfecto&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;No es cuadrado perfecto&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

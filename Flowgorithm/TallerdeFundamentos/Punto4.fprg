@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Punto4"/>
+        <attribute name="authors" value="Black"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-14 11:22:57 a.&#160;m."/>
+        <attribute name="created" value="QmxhY2s7REVTS1RPUC01STlMS1M1OzIwMjYtMDMtMTQ7MDk6NDE6MDQgYS7CoG0uOzMxMTE="/>
+        <attribute name="edited" value="QmxhY2s7REVTS1RPUC01STlMS1M1OzIwMjYtMDMtMTQ7MTE6MjI6NTcgYS7CoG0uOzE7MzIxOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2, r, n, mcm, mcd, a, b" type="Integer" array="False" size=""/>
+            <input variable="num1"/>
+            <input variable="num2"/>
+            <assign variable="r" expression="1"/>
+            <assign variable="n" expression="1"/>
+            <assign variable="a" expression="num1"/>
+            <assign variable="b" expression="num2"/>
+            <if expression="num1 % 2 == 0">
+                <then>
+                    <if expression="num2 % 2 == 0">
+                        <then>
+                            <while expression="num2 != 0">
+                                <assign variable="r" expression="num1 % num2"/>
+                                <assign variable="num1" expression="num2"/>
+                                <assign variable="num2" expression="r"/>
+                            </while>
+                            <output expression="num1" newline="True"/>
+                        </then>
+                        <else>
+                            <while expression="num2 != 0">
+                                <assign variable="r" expression="num1 % num2"/>
+                                <assign variable="num1" expression="num2"/>
+                                <assign variable="num2" expression="r"/>
+                            </while>
+                            <assign variable="mcd" expression="num1"/>
+                            <assign variable="mcm" expression="(a * b) / mcd"/>
+                            <output expression="mcm" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="num2 % 2 == 0">
+                        <then>
+                            <while expression="num2 != 0">
+                                <assign variable="r" expression="num1 % num2"/>
+                                <assign variable="num1" expression="num2"/>
+                                <assign variable="num2" expression="r"/>
+                            </while>
+                            <assign variable="mcd" expression="num1"/>
+                            <assign variable="mcm" expression="(a * b) / mcd"/>
+                            <output expression="mcm" newline="True"/>
+                        </then>
+                        <else>
+                            <while expression="num2 != 0">
+                                <assign variable="r" expression="num1 % num2"/>
+                                <assign variable="num1" expression="num2"/>
+                                <assign variable="num2" expression="r"/>
+                            </while>
+                            <output expression="num1" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

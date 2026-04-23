@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Punto2"/>
+        <attribute name="authors" value="Black"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-14 09:36:21 a.&#160;m."/>
+        <attribute name="created" value="QmxhY2s7REVTS1RPUC01STlMS1M1OzIwMjYtMDMtMTQ7MDg6NDg6MzkgYS7CoG0uOzMxMjU="/>
+        <attribute name="edited" value="QmxhY2s7REVTS1RPUC01STlMS1M1OzIwMjYtMDMtMTQ7MDk6MzY6MjEgYS7CoG0uOzE7MzIyMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="max, n, i, prim, divisores" type="Integer" array="False" size=""/>
+            <input variable="max"/>
+            <assign variable="n" expression="2"/>
+            <while expression="n &lt;= max">
+                <assign variable="i" expression="2"/>
+                <assign variable="divisores" expression="0"/>
+                <while expression="i &lt; n">
+                    <if expression="n % i == 0">
+                        <then>
+                            <assign variable="divisores" expression="divisores + 1"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="i" expression="i + 1"/>
+                </while>
+                <if expression="divisores == 0">
+                    <then>
+                        <assign variable="prim" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="n" expression="n + 1"/>
+            </while>
+            <output expression="prim" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="faltpunt4"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-10 09:48:31 a.&#8239;m."/>
+        <attribute name="created" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAzLTEwOzA5OjMyOjIxIGEu4oCvbS47MTAzOTI="/>
+        <attribute name="edited" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAzLTEwOzA5OjQ4OjMxIGEu4oCvbS47MTsxMDUwOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2, min, i, mcd" type="Integer" array="False" size=""/>
+            <input variable="num1"/>
+            <input variable="num2"/>
+            <if expression="num1 % 2 == 0">
+                <then>
+                    <if expression="num2 % 2 == 0">
+                        <then>
+                            <if expression="num1 &lt; num2">
+                                <then>
+                                    <assign variable="min" expression="num1"/>
+                                </then>
+                                <else>
+                                    <assign variable="min" expression="num2"/>
+                                </else>
+                            </if>
+                            <assign variable="i" expression="1"/>
+                            <assign variable="mcd" expression="1"/>
+                            <while expression="i &lt;= min">
+                                <if expression="min1 % i == 0 &amp;&amp; min2 % i = 0">
+                                    <then>
+                                        <assign variable="mcd" expression="i"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                                <assign variable="i" expression="i + 1"/>
+                            </while>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else>
+                    <if expression="num2 % 2 == 0">
+                        <then/>
+                        <else>
+                            <if expression="num1 &lt; num2">
+                                <then>
+                                    <assign variable="min" expression="num1"/>
+                                </then>
+                                <else>
+                                    <assign variable="min" expression="num2"/>
+                                </else>
+                            </if>
+                            <assign variable="i" expression="1"/>
+                            <assign variable="mcd" expression="1"/>
+                            <while expression="i &lt;= min">
+                                <if expression="min1 % i == 0 &amp;&amp; min2 % i = 0">
+                                    <then>
+                                        <assign variable="mcd" expression="i"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                                <assign variable="i" expression="i + 1"/>
+                            </while>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

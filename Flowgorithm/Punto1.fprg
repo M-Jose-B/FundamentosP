@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Punto1"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-10 08:48:51 a.&#8239;m."/>
+        <attribute name="created" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAzLTEwOzA4OjA4OjExIGEu4oCvbS47MTAzOTM="/>
+        <attribute name="edited" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAzLTEwOzA4OjQ4OjUxIGEu4oCvbS47MTsxMDUwOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, n, prom, sum, cant" type="Integer" array="False" size=""/>
+            <input variable="num"/>
+            <assign variable="prom" expression="0"/>
+            <assign variable="sum" expression="0"/>
+            <assign variable="cant" expression="0"/>
+            <for variable="n" start="1" end="num" direction="inc" step="1">
+                <if expression="n % 2 == 0">
+                    <then>
+                        <assign variable="sum" expression="sum + n"/>
+                        <assign variable="cant" expression="cant + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="prom" expression="sum / cant"/>
+            <output expression="&quot;El promedio de los numeros pares leidos es &quot; &amp; prom" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

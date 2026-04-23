@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="convhf"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-05 10:41:56 a.&#8239;m."/>
+        <attribute name="created" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAzLTA1OzA4OjE0OjU5IGEu4oCvbS47MTA0MDY="/>
+        <attribute name="edited" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAzLTA1OzEwOjQxOjU2IGEu4oCvbS47MjsxMDUwNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="codigo, letra, resultado" type="String" array="False" size=""/>
+            <declare name="i, n" type="Integer" array="False" size=""/>
+            <input variable="codigo"/>
+            <assign variable="i" expression="0"/>
+            <assign variable="n" expression="len(codigo)"/>
+            <assign variable="resultado" expression="&quot;&quot;"/>
+            <while expression="i &lt;= n-1">
+                <assign variable="letra" expression="Char(codigo, i)"/>
+                <if expression="Char(codigo,i) == &quot;h&quot;">
+                    <then>
+                        <assign variable="resultado" expression="resultado &amp; &quot;f&quot;"/>
+                    </then>
+                    <else>
+                        <assign variable="resultado" expression="resultado &amp; Char(codigo,i)"/>
+                    </else>
+                </if>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <output expression="resultado" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

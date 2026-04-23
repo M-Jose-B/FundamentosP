@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Punto6"/>
+        <attribute name="authors" value="Black"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-14 12:48:43 p.&#160;m."/>
+        <attribute name="created" value="QmxhY2s7REVTS1RPUC01STlMS1M1OzIwMjYtMDMtMTQ7MDg6MzA6MTMgYS7CoG0uOzMxMDg="/>
+        <attribute name="edited" value="QmxhY2s7REVTS1RPUC01STlMS1M1OzIwMjYtMDMtMTQ7MTI6NDg6NDMgcC7CoG0uOzI7MzIzOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, n" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="1"/>
+            <input variable="num"/>
+            <while expression="n &lt;= num">
+                <if expression="n % 2 == 0">
+                    <then>
+                        <if expression="n % 3 == 0">
+                            <then>
+                                <output expression="n &amp; &quot;. Es divisible entre 2 y 3&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="n % 5 == 0">
+                                    <then>
+                                        <output expression="n &amp; &quot;. Es divisible entre 2 y 5&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="n &amp; &quot;. Es divisible entre 2&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="n % 3 == 0">
+                            <then>
+                                <if expression="n % 5 == 0">
+                                    <then>
+                                        <output expression="n &amp; &quot;. Es divisible entre 3 y 5&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="n &amp; &quot;. Es divisible entre 3&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else/>
+                        </if>
+                        <if expression="n % 5 == 0">
+                            <then>
+                                <output expression="n &amp; &quot;. Es divisible entre 5&quot;" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+                <if expression="n % 2 != 0 &amp;&amp; n % 3 != 0 &amp;&amp; n % 5 != 0">
+                    <then>
+                        <output expression="n &amp; &quot;. &quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="n" expression="n + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

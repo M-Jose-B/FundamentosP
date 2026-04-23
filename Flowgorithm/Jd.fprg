@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Jd"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-02-19 08:34:13 a.&#8239;m."/>
+        <attribute name="created" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAyLTE3OzA4OjEzOjM1IGEu4oCvbS47MTA0MDE="/>
+        <attribute name="edited" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAyLTE5OzA4OjM0OjEzIGEu4oCvbS47MjsxMDUxMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduzca una variable a &quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Introduzca una variable b &quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;Introduzca una variable c &quot;" newline="True"/>
+            <input variable="c"/>
+            <if expression="a &lt;= b">
+                <then>
+                    <if expression="b &lt;= c">
+                        <then>
+                            <output expression="a &amp; &quot; &lt; &quot; &amp; b &amp; &quot; &lt; &quot; &amp; c" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="a &amp; &quot; &lt; &quot; &amp; c &amp; &quot; &lt; &quot; &amp; b" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="b &lt;= c">
+                        <then>
+                            <output expression="b &amp; &quot; &lt; &quot; &amp; c &amp; &quot; &lt; &quot; &amp; a" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="c &amp; &quot; &lt; &quot; &amp; b &amp; &quot; &lt; &quot; &amp; a" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

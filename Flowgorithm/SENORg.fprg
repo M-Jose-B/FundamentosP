@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="SENORg"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-12 10:34:07 a.&#8239;m."/>
+        <attribute name="created" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAzLTEyOzEwOjE4OjM0IGEu4oCvbS47MTAzOTQ="/>
+        <attribute name="edited" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAzLTEyOzEwOjM0OjA3IGEu4oCvbS47MTsxMDUwMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sum, angulo, factor, i, n, a" type="Real" array="False" size=""/>
+            <input variable="angulo"/>
+            <input variable="i"/>
+            <assign variable="angulo" expression="(angulo * 3.14159) / 180"/>
+            <assign variable="n" expression="0"/>
+            <assign variable="sum" expression="0"/>
+            <while expression="n &lt; i">
+                <assign variable="a" expression="1"/>
+                <assign variable="factor" expression="1"/>
+                <while expression="a &lt;= (2 * n) + 1">
+                    <assign variable="factor" expression="factor * a"/>
+                    <assign variable="a" expression="a + 1"/>
+                </while>
+                <assign variable="sum" expression="sum + (((-1 ^ n) * (angulo ^ ((2 * n) + 1))) / factor)"/>
+                <assign variable="n" expression="n + 1"/>
+            </while>
+            <output expression="sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

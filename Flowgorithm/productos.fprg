@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="sumatoriasimple"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-02-24 09:18:17 a.&#8239;m."/>
+        <attribute name="created" value="Q0VOVElDO0hCMy05OzIwMjYtMDItMjQ7MDg6MTY6MDggYS7igK9tLjsxMDM5NA=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMy05OzIwMjYtMDItMjQ7MDg6MjI6NTEgYS7igK9tLjsyOzEwNDk4"/>
+        <attribute name="edited" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAyLTI0OzA5OjE4OjE3IGEu4oCvbS47MTsxMDUxMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <declare name="prod" type="Real" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="i" expression="1"/>
+            <assign variable="prod" expression="1"/>
+            <while expression="i &lt;= n">
+                <assign variable="prod" expression="prod *((i)/(2))"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <output expression="prod" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

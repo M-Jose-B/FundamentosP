@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Punto9"/>
+        <attribute name="authors" value="Black"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-16 08:12:13 a.&#160;m."/>
+        <attribute name="created" value="QmxhY2s7REVTS1RPUC01STlMS1M1OzIwMjYtMDMtMTY7MDc6NTI6MjMgYS7CoG0uOzMxMTQ="/>
+        <attribute name="edited" value="QmxhY2s7REVTS1RPUC01STlMS1M1OzIwMjYtMDMtMTY7MDg6MTI6MTMgYS7CoG0uOzM7MzIyMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="max, suma, a, n" type="Integer" array="False" size=""/>
+            <input variable="max"/>
+            <assign variable="n" expression="0"/>
+            <assign variable="a" expression="1"/>
+            <while expression="n + a &lt; max">
+                <assign variable="suma" expression="a + n"/>
+                <assign variable="n" expression="a"/>
+                <assign variable="a" expression="suma"/>
+            </while>
+            <assign variable="suma" expression="a + n"/>
+            <assign variable="n" expression="a"/>
+            <assign variable="a" expression="suma"/>
+            <output expression="a" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

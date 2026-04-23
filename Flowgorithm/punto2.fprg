@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="primos2"/>
+        <attribute name="authors" value="CENTIC"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-10 09:15:32 a.&#8239;m."/>
+        <attribute name="created" value="Q0VOVElDO0hCMy05OzIwMjYtMDItMjY7MTA6MjE6MjQgYS7igK9tLjsxMDM4Mw=="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMy05OzIwMjYtMDItMjY7MTA6MjE6MjcgYS7igK9tLjsxO0NFTlRJQztIQjMtOTsyMDI2LTAyLTI2OzA5OjIyOjM2IGEu4oCvbS47cHJpbW9zMS5mcHJnOzIyMTk5"/>
+        <attribute name="edited" value="Q0VOVElDO0hCMy05OzIwMjYtMDItMjY7MTA6MjY6MDEgYS7igK9tLjsxO0NFTlRJQztIQjMtOTsyMDI2LTAyLTI2OzEwOjIxOjI0IGEu4oCvbS47MjA5MzM="/>
+        <attribute name="edited" value="Q0VOVElDO0hCMy05OzIwMjYtMDItMjY7MTA6Mjg6MTAgYS7igK9tLjs0OzEwNDk2"/>
+        <attribute name="edited" value="Q0VOVElDOzMtOS0wNTsyMDI2LTAzLTEwOzA5OjE1OjMyIGEu4oCvbS47MjsxMDUwNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, num, divisores, max, ult" type="Integer" array="False" size=""/>
+            <input variable="max"/>
+            <assign variable="num" expression="2"/>
+            <while expression="num &lt;= max">
+                <assign variable="i" expression="2"/>
+                <assign variable="divisores" expression="0"/>
+                <while expression="i &lt; num">
+                    <if expression="num % i == 0">
+                        <then>
+                            <assign variable="divisores" expression="divisores + 1"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="i" expression="i + 1"/>
+                </while>
+                <if expression="divisores == 0">
+                    <then>
+                        <assign variable="ult" expression="num"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="num" expression="num + 1"/>
+            </while>
+            <output expression="ult" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
