@@ -15,6 +15,6 @@ int main()
         }
     mcd = a;
     mcm = (ab)/mcd;
-    std::cout << "El mcm de ambos numeros es: " <<mcd <<std::endl;
+    std::cout << "El mcd de ambos numeros es: " <<mcd <<std::endl;
     std::cout << "El mcm de ambos numeros es: " <<mcm <<std::endl;
 }
