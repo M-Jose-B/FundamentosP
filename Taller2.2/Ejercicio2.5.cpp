@@ -122,7 +122,7 @@ int main()
             {
                 if(digit == true)
                 {
-                    std::cout <<"Su contraseña es fuerte, felicidades"<<"\n";
+                    std::cout <<"Su contraseña es media, puede mejorar"<<"\n";
                 }
                 else
                 {
